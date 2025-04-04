@@ -2,3 +2,6 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 @import url('./navegador.css');
+@import url('./containerServico.css');
+@import url('./containerSobre.css');
+@import url('./footer.css');

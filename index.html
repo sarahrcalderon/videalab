@@ -8,14 +8,14 @@
     <meta name="keywords" content="design gráfico, criação de vídeos, identidade visual, edição de vídeo, design de interface">
     <meta name="author" content="videa">
     <meta name="robots" content="index, follow">
-    <title>Design & Criação de Vídeos | VIDEA LAB</title>
-    <meta property="og:title" content="Design & Criação de Vídeos | Nome da Sua Empresa">
+    <title>Design | Criação & Edição Vídeos | VIDEA LAB</title>
+    <meta property="og:title" content="Design | Criação & Edição Vídeos | VIDEA">
     <meta property="og:description" content="Transforme sua marca com design profissional e vídeos de qualidade.">
     <meta property="og:image" content="https://www.seusite.com/assets/imagem-destacada.jpg">
     <meta property="og:url" content="https://www.videalab.com.br">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Design & Criação de Vídeos">
+    <meta name="twitter:title" content="Design | Criação & Edição Vídeos">
     <meta name="twitter:description" content="Serviços profissionais para transformar sua marca com identidade visual única e vídeos impactantes.">
     <meta name="twitter:image" content="https://www.seusite.com/assets/imagem-destacada.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16"href="./FAVICON.png">
     <link rel="stylesheet" href="./css/global.css">
 </head>
 <body>
@@ -38,21 +39,77 @@
     </button>
     <ul>
         <li><a href="/"></a></li>
-        <li><a href="/servicos/">Serviços</a></li>
-        <li><a href="/sobre/">Sobre Nós</a></li>
-        <li><a href="/contato/">Contato</a></li>
+        <li><a href="">Serviços</a></li>
+        <li><a href="">Sobre Nós</a></li>
+        <li><a href="">Contato</a></li>
     </ul>
 </nav>
+<div class="linha-topo"></div>
   <section>
-
+    <div class="containerServicos">
+        <div class="Titulo">
+            <h2>Nosso Trabalho</h2>
+        </div>
+        <div class="galeriaTrabalho">
+            <div class="video-container">
+                <video src="video1.mp4" muted loop></video>
+            </div>
+            <div class="video-container">
+                <video src="video2.mp4" muted loop></video>
+            </div>
+            <div class="video-container">
+                <video src="video3.mp4" muted loop></video>
+            </div>
+        </div>
+    </div>
   </section>
+  <section id="sobre">
+    <div class="containerSobre">
+        <div class="imagem" id="imagemAnimada">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sobre nós">
+        </div>
+        <div class="conteudo">
+            <h2 class="titulo1">Sobre nós...</h2>
+            <p class="texto">
+                Somos uma equipe apaixonada por design e inovação, trazendo soluções criativas para cada projeto.
+            </p>
+            <div class="icones">
+                <i class="fa-solid fa-paintbrush"></i>
+                <i class="fa-solid fa-layer-group"></i>
+                <i class="fa-solid fa-vector-square"></i>
+                <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
   <footer>
-    <div class="container">
-        <p>&copy; 2025 | VIDEALAB | Todos os direitos reservados.</p>
+    <div class="containerFooter">
+        <div class="social-links">
+            <a href="https://instagram.com/seuperfil" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/seunumerowhatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:seuemail@email.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#trabalhos">Trabalhos •</a></li>
+                <li><a href="#quem-somos">Quem somos •</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <p class="copy">&copy; 2025 | VIDEALAB - Todos os direitos reservados.</p>
     </div>
 </footer>
+
 <script src="./js/script.js"></script>
 <script src="./js/menu.js"></script>
+<script src="./js/efeitoImagem.js"></script>
 
 
 </body>
