@@ -58,7 +58,8 @@ body {
 
 .video-container video {
   width: 100%;
-  height: auto;
+  height: 600px;
+  object-fit: cover; /*preenche sem distorcer*/
   display: block;
   border-radius: 10px;
 }

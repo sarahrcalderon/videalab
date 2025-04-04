@@ -1,0 +1,17 @@
+.topo {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
