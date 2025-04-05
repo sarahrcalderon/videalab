@@ -1,5 +1,4 @@
 body {
-  background-color: var(--cor-branco);
   margin: 0;
   padding: 0;
 }
@@ -7,7 +6,7 @@ body {
 .entreEmContato {
   max-width: 600px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--cor-branco);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -17,7 +16,7 @@ body {
   text-align: center;
   font-size: 28px;
   margin-bottom: 25px;
-  color: #333;
+  color: var(--cor-preto);
 }
 
 .formularioContato {
@@ -32,25 +31,49 @@ label {
   color: #444;
 }
 
-input,
+/* Wrapper para os inputs com ícones */
+.inputIconWrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.inputIconWrapper .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--cor-roxo);
+  font-size: 1rem;
+}
+
+.inputIconWrapper input {
+  width: 100%;
+  padding: 12px 12px 12px 36px; /* padding à esquerda para ícone */
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
 textarea {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 0.3s;
 }
-
-input:focus,
+.inputIconWrapper input:focus,
 textarea:focus {
-  border-color: #6c63ff;
+  border-color: var(--cor-roxo);
   outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 0, 185, 0.2);
 }
 
 button {
   margin-top: 20px;
   padding: 12px;
-  background-color: #6c63ff;
+  background-color: var(--cor-roxo);
   color: white;
   font-size: 16px;
   border: none;
@@ -59,7 +82,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.formularioContato button:hover {
   background-color: #574fd6;
 }
 

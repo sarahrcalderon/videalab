@@ -114,34 +114,37 @@
         </div>
     </div>
 </section>
-<section>
-    <section>
-        <div class="entreEmContato">
-          <h3 class="contatoTitulo">Contato</h3>
-          <form action="https://formspree.io/f/SEU_ID" method="POST" class="formularioContato">
-            
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required />
-    
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required />
-    
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-    
-            <!-- Proteção contra spam -->
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
-    
-            <!-- Redirecionamento após envio -->
-            <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-    
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </section>
+  <section>
+    <div class="entreEmContato">
+      <h3 class="contatoTitulo">Contato</h3>
+      <form action="https://formspree.io/f/SEU_ID" method="POST" class="formularioContato">
   
-
+        <label for="nome">Nome</label>
+        <div class="inputIconWrapper">
+          <i class="fa fa-user icon"></i>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+  
+        <label for="email">E-mail</label>
+        <div class="inputIconWrapper">
+          <i class="fa fa-envelope icon"></i>
+          <input type="email" id="email" name="email" required />
+        </div>
+  
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+  
+        <!-- Proteção contra spam -->
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+  
+        <!-- Redirecionamento após envio -->
+        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+  
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+</section>
   <footer>
     <div class="containerFooter">
         <div class="social-links">
