@@ -1,37 +1,25 @@
-:root {
-  --cor-preto: #111111;
-  --cor-branco: #f4f4f4;
-  --cor-amarelo: #ffc900;
-  --cor-laranja: #ff6600;
-  --cor-vermelho: #ff0029;
-  --cor-violeta: #b300d4;
-  --cor-roxo: #4c00b9;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: var(--cor-branco);
-  color: var(--cor-branco);
   margin: 0;
   padding: 0;
 }
 
-/* Layout */
 .containerServicos {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 50px;
   max-width: 1200px;
   margin: auto;
 }
 
-.Titulo {
+.galeria-wrapper .Titulo {
   flex: 1;
   text-align: left;
+  margin-bottom: 30px;
 }
 
-.Titulo h2 {
+.galeria-wrapper .Titulo h2 {
   font-size: 2rem;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -39,16 +27,35 @@ body {
   border-left: 5px solid var(--cor-vermelho);
   padding-left: 15px;
 }
+.galeria-wrapper .subTitulo {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
+}
+.galeria-wrapper .descricaoServico {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
+}
 
 /* Galeria de vídeos */
+.galeria-wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .galeriaTrabalho {
-  flex: 2;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
 .video-container {
-  flex: 1;
+  aspect-ratio: 1 / 2;
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
@@ -58,23 +65,37 @@ body {
 
 .video-container video {
   width: 100%;
-  height: 600px;
-  object-fit: cover; /*preenche sem distorcer*/
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 10px;
 }
 
-.video-container:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
-  border: 3px solid;
-  border-image-source: linear-gradient(
-    to right,
-    var(--cor-amarelo),
-    var(--cor-laranja),
-    var(--cor-vermelho),
-    var(--cor-violeta),
-    var(--cor-roxo)
-  );
-  border-image-slice: 1;
+/* Overlay e video expandido */
+.video-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.video-expanded {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.video-expanded video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

@@ -6,6 +6,7 @@
   --cor-vermelho: #ff0029;
   --cor-violeta: #b300d4;
   --cor-roxo: #4c00b9;
+  --cor-cinzaMedio: #838383;
 }
 
 section {
@@ -49,28 +50,54 @@ section {
   margin-bottom: 15px;
   border-left: 5px solid var(--cor-vermelho);
 }
+.subTituloSobre {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
+}
 
 .texto {
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--cor-preto);
-  margin-bottom: 20px;
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
 }
 
-.icones {
+.iconesDescricao {
+  margin-top: 30px;
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  font-size: 30px;
+  padding-left: 15px;
 }
 
-.icones i {
+.itemIcone {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.itemIcone i {
+  font-size: 1.2rem;
   color: var(--cor-laranja);
+  min-width: 30px;
+  margin-top: 4px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.icones i:hover {
+.itemIcone i:hover {
   transform: scale(1.2);
   color: var(--cor-vermelho);
+}
+
+.itemIcone p {
+  font-size: 0.9rem;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
 /* Animação ao rolar */

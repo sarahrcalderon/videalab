@@ -53,21 +53,38 @@
 <div class="linha-topo"></div>
   <section>
     <div class="containerServicos">
-        <div class="Titulo">
-            <h2>Nosso Trabalho</h2>
-        </div>
-        <div class="galeriaTrabalho">
+        <div class="galeria-wrapper">        
+          <div class="Titulo">
+            <h2>Nossos trabalhos</h2>
+            <p class="subTitulo">Criação de vídeos, edição e design para marcas em crescimento.</p>
+            <p class="descricaoServico">Ajudamos marcas que estão entrando no mercado — ou que precisam se reinventar nas redes sociais — com serviços completos de criação e edição de vídeos, além de design estratégico. Do roteiro à publicação, desenvolvemos conteúdos visuais que conectam, engajam e posicionam sua marca com relevância no ambiente digital. Transformamos ideias em experiências visuais que geram valor e resultados. Também desenvolvemos páginas de cadastro (landing pages) pensadas para impactar e converter. Cada elemento é criado com base nas boas práticas de UX/UI design, garantindo uma experiência fluida, intuitiva e centrada no usuário. Nosso foco é transformar visitantes em leads qualificados, por meio de layouts responsivos, chamadas claras para ação, textos objetivos e um visual limpo — tudo pensado para capturar atenção e facilitar o preenchimento. Ideal para campanhas, lançamentos e estratégias de marketing digital.</p>
+          </div>   
+          <div class="galeriaTrabalho">
             <div class="video-container">
-                <video src="https://cdn.pixabay.com/video/2023/10/20/185787-876545918_small.mp4" controls muted loop></video>
-              </div>              
-            <div class="video-container">
-                <video src="https://cdn.pixabay.com/video/2023/01/30/148597-794221559_small.mp4" controls muted loop></video>
+              <div class="video-overlay">
+                <div class="video-expanded"></div>
+              </div>
+              <video src="https://cdn.pixabay.com/video/2023/10/20/185787-876545918_small.mp4" controls muted loop></video>
             </div>
+      
             <div class="video-container">
-                <video src="https://cdn.pixabay.com/video/2024/04/25/209424_small.mp4" controls  muted loop></video>
+              <div class="video-overlay">
+                <div class="video-expanded"></div>
+              </div>
+              <video src="https://cdn.pixabay.com/video/2023/01/30/148597-794221559_small.mp4" controls muted loop></video>
             </div>
+      
+            <div class="video-container">
+              <div class="video-overlay">
+                <div class="video-expanded"></div>
+              </div>
+              <video src="https://cdn.pixabay.com/video/2024/04/25/209424_small.mp4" controls muted loop></video>
+            </div>
+          </div>
+          
         </div>
-    </div>
+      </div>
+      
   </section>
   <section id="sobre">
     <div class="containerSobre">
@@ -76,18 +93,54 @@
         </div>
         <div class="conteudo">
             <h2 class="titulo1">Sobre nós</h2>
+            <p class="subTituloSobre">Atuamos com design e suas tecnologias há anos no mercado digital.</p>
             <p class="texto">
-                Somos uma equipe apaixonada por design e inovação, trazendo soluções criativas para cada projeto.
+                Unimos criatividade e estratégia para ajudar empresas que se sentem perdidas no meio de tantas mudanças e tendências online.Nosso objetivo é simplificar o caminho. Oferecemos soluções visuais, criação e edição de vídeos, além de identidade de marca para negócios que querem se destacar nas redes sociais e no ambiente digital.Aqui, cada projeto é feito com atenção, propósito e foco em resultados. Estamos prontos para construir com você uma presença de marca forte, atual e conectada com o seu público.
             </p>
-            <div class="icones">
-                <i class="fa-solid fa-paintbrush"></i>
-                <i class="fa-solid fa-layer-group"></i>
-                <i class="fa-solid fa-vector-square"></i>
-                <i class="fa-solid fa-pen-ruler"></i>
-            </div>
+            <div class="iconesDescricao">
+                <div class="itemIcone">
+                    <i class="fa-solid fa-video"></i>
+                    <p>Criação e edição de vídeos profissionais para redes sociais e campanhas digitais.</p>
+                </div>
+                <div class="itemIcone">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <p>Design estratégico para identidade visual marcante e atualizada.</p>
+                </div>
+                <div class="itemIcone">
+                    <i class="fa-solid fa-code"></i>
+                    <p>Criação de página para captura de leads com foco em conversão.</p>
+                </div>
+            </div>     
         </div>
     </div>
 </section>
+<section>
+    <section>
+        <div class="entreEmContato">
+          <h3 class="contatoTitulo">Contato</h3>
+          <form action="https://formspree.io/f/SEU_ID" method="POST" class="formularioContato">
+            
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+    
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+    
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    
+            <!-- Proteção contra spam -->
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+    
+            <!-- Redirecionamento após envio -->
+            <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+    
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+  
 
   <footer>
     <div class="containerFooter">
@@ -116,6 +169,7 @@
 <script src="./js/script.js"></script>
 <script src="./js/menu.js"></script>
 <script src="./js/efeitoImagem.js"></script>
+<script src="./js/efeitoVideo.js"></script>
 
 
 </body>
