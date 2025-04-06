@@ -1,14 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const imagem = document.getElementById('imagemAnimada');
+document.addEventListener('DOMContentLoaded', () => {
+  const imagensAnimadas = document.querySelectorAll('.animada');
 
-  function aparecerImagem() {
-    const posicao = imagem.getBoundingClientRect().top;
-    const alturaTela = window.innerHeight;
+  function verificarAparecer() {
+    imagensAnimadas.forEach((img) => {
+      const top = img.getBoundingClientRect().top;
+      const altura = window.innerHeight;
 
-    if (posicao < alturaTela - 100) {
-      imagem.classList.add('aparecer');
-    }
+      if (top < altura - 100) {
+        img.classList.add('aparecer');
+      }
+    });
   }
 
-  window.addEventListener('scroll', aparecerImagem);
+  window.addEventListener('scroll', verificarAparecer);
+  verificarAparecer(); // dispara no load também
 });

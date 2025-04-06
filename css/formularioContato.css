@@ -91,7 +91,7 @@ fieldset {
 .inputIconWrapper input {
   width: 100%;
   padding: 12px 12px 12px 36px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
@@ -100,7 +100,7 @@ fieldset {
 
 textarea {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 1rem;
   resize: vertical;
