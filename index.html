@@ -114,37 +114,47 @@
         </div>
     </div>
 </section>
-  <section>
-    <div class="entreEmContato">
-      <h3 class="contatoTitulo">Contato</h3>
-      <form action="https://formspree.io/f/SEU_ID" method="POST" class="formularioContato">
-  
-        <label for="nome">Nome</label>
-        <div class="inputIconWrapper">
-          <i class="fa fa-user icon"></i>
-          <input type="text" id="nome" name="nome" required />
+<section aria-labelledby="titulo-contato">
+  <div class="entreEmContato">
+    <h3 id="titulo-contato" class="contatoTitulo">Contato</h3>
+
+    <form action="https://formspree.io/f/SEU_ID" method="POST" class="formularioContato">
+      <label for="nome">Nome <span aria-hidden="true">*</span></label>
+      <div class="inputIconWrapper">
+        <i class="fa fa-user icon" aria-hidden="true"></i>
+        <input type="text" id="nome" name="nome" required autocomplete="name" />
+      </div>
+
+      <label for="email">E-mail <span aria-hidden="true">*</span></label>
+      <div class="inputIconWrapper">
+        <i class="fa fa-envelope icon" aria-hidden="true"></i>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+      <fieldset>
+        <legend>Melhor forma de contato</legend>
+        <div>
+          <input type="checkbox" id="contato-whatsapp" name="preferencia_contato[]" value="Whatsapp" checked />
+          <label for="contato-whatsapp">WhatsApp</label>
+        </div>     
+        <div>
+          <input type="checkbox" id="contato-email" name="preferencia_contato[]" value="Email" />
+          <label for="contato-email">E-mail</label>
         </div>
-  
-        <label for="email">E-mail</label>
-        <div class="inputIconWrapper">
-          <i class="fa fa-envelope icon"></i>
-          <input type="email" id="email" name="email" required />
-        </div>
-  
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-  
-        <!-- Proteção contra spam -->
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_captcha" value="false">
-  
-        <!-- Redirecionamento após envio -->
-        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-  
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
+      </fieldset>
+
+      <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <!-- Proteção contra spam -->
+      <input type="text" name="_honey" style="display:none" aria-hidden="true">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </section>
+
   <footer>
     <div class="containerFooter">
         <div class="social-links">
