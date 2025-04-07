@@ -8,12 +8,16 @@
   --cor-roxo: #4c00b9;
   --cor-cinzaMedio: #838383;
 }
+#servico {
+  height: 100vh;
+}
 .containerSobre {
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr 1fr;
 }
 .titulo1 {
-  font-size: 32px;
+  font-size: 2rem;
   color: var(--cor-preto);
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;

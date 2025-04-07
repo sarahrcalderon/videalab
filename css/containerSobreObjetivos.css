@@ -1,0 +1,46 @@
+.objetivos-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tituloSobre {
+  font-size: 2.5rem;
+  padding-left: 15px;
+  border-left: 5px solid var(--cor-vermelho);
+  color: var(--cor-preto);
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.esquerda {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  max-width: 40%;
+}
+
+.direita {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.direita div {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.clareza {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.tituloSobre {
+  margin-bottom: 1rem;
+}
