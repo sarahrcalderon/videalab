@@ -49,6 +49,25 @@
   font-variant: small-caps;
   font-weight: 400;
 }
+.botaoSaibaMais {
+  position: absolute;
+  right: 300px;
+  margin-top: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--cor-vermelho);
+  color: var(--cor-branco);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botaoSaibaMais:hover {
+  background-color: #fa3c5b;
+}
 
 .galeriaApresentacao {
   display: flex;
@@ -87,5 +106,11 @@
   .galeriaApresentacao {
     align-items: center;
     justify-content: center;
+  }
+  .botaoSaibaMais {
+    position: static;
+    margin: 40px auto 0 auto;
+    display: block;
+    transform: none;
   }
 }

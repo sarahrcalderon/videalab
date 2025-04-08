@@ -18,7 +18,7 @@
 
 /* Estiliza a barra */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: linear-gradient(
@@ -36,18 +36,6 @@
 ::-webkit-scrollbar-track {
   background: #f4f4f400;
 }
-
-/* ::-webkit-scrollbar-track {
-  background: linear-gradient(
-    to bottom,
-    #f4f4f4,
-    #ffc900,
-    #ff6600,
-    #ff0029,
-    #b300d4,
-    #4c00b9
-  );
-} */
 
 /* Parte que se move (o "thumb") */
 ::-webkit-scrollbar-thumb {

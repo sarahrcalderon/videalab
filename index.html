@@ -64,7 +64,7 @@
     <div class="scroll-progress"></div>
     <div class="linha-topo"></div>
     <header>
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+      <button type="button "class="menu-btn" id="menuBtn" aria-label="Abrir menu">
         <i class="bi bi-list"></i>
       </button>
     </header>
@@ -78,6 +78,7 @@
       </div>
       <div class="fraseInicio">
         <h1>Você cria,a gente empodera<span>!</span></h1>
+        <a href="#contato" type="button "class="botaoSaibaMais">Saiba Mais</a>
       </div>
       <div class="fraseInicio1">
         <h2>Presença digital  —  do seu jeito, no seu ritmo.</h2><span>
@@ -93,13 +94,13 @@
       <img src="https://plus.unsplash.com/premium_photo-1711987232813-76c72608b745?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto 3">
       <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto 4">
     </div>
+   
     
     <nav class="menu" id="menu">
       <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
         <i class="bi bi-x-lg"></i>
       </button>
       <ul>
-        <li><a href=""></a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#sobre">Sobre Nós</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -107,6 +108,7 @@
     </nav>
 
     <section id="servicos">
+      <div class="faixaLateral">WORKS</div>
       <div class="containerServicos">
         <div class="galeria-wrapper">
           <div class="Titulo">
@@ -254,15 +256,9 @@
           <label for="nome">Nome <span aria-hidden="true">*</span></label>
           <div class="inputIconWrapper">
             <i class="fa fa-user icon" aria-hidden="true"></i>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              required
-              autocomplete="name"
-            />
+            <input type="text" id="nome" name="nome" required autocomplete="name" />
           </div>
-
+    
           <label for="email">E-mail <span aria-hidden="true">*</span></label>
           <div class="inputIconWrapper">
             <i class="fa fa-envelope icon" aria-hidden="true"></i>
@@ -296,12 +292,8 @@
               <label for="contato-email">E-mail</label>
             </div>
           </fieldset>
-
-          <label for="mensagem"
-            >Mensagem <span aria-hidden="true">*</span></label
-          >
+          <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
           <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
           <!-- Proteção contra spam -->
           <input
             type="text"
@@ -321,7 +313,7 @@
         </form>
       </div>
     </section>
-
+    
     <footer>
       <div class="containerFooter">
         <div class="social-links">
@@ -346,13 +338,13 @@
           &copy; 2025 | VIDEALAB - Todos os direitos reservados.
         </p>
       </div>
-    </footer>
-
+    </footer> 
     <script src="./js/script.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/fraseEfeito.js"></script>
     <script src="./js/efeitoImagem.js"></script>
     <script src="./js/scrollBar.js"></script>
     <script src="./js/formulario.js"></script>
+    <script src="./js/evitaScrollClick.js"></script>
   </body>
 </html>

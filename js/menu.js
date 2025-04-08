@@ -28,7 +28,8 @@ function setupMenu() {
 
   function smoothScroll(targetId) {
     const targetElement = document.querySelector(targetId);
-    if (targetElement) {
+
+    if (targetElement && targetId !== '#') {
       closeMenu();
 
       setTimeout(() => {
@@ -40,25 +41,32 @@ function setupMenu() {
     }
   }
 
-  // Configuração dos event listeners
   menuBtn.addEventListener('click', function (e) {
+    e.preventDefault();
     e.stopPropagation();
     openMenu();
   });
 
-  closeBtn.addEventListener('click', closeMenu);
+  closeBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    closeMenu();
+  });
 
   menuLinks.forEach((link) => {
     link.addEventListener('click', function (e) {
-      e.preventDefault();
       const targetId = this.getAttribute('href');
-      if (targetId !== '#') {
-        smoothScroll(targetId);
+
+      if (!targetId || targetId === '#') {
+        e.preventDefault();
+        closeMenu();
+        return;
       }
+
+      e.preventDefault();
+      smoothScroll(targetId);
     });
   });
 
-  // Fecha o menu ao clicar fora ou pressionar Escape
   document.addEventListener('click', function (e) {
     if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
       closeMenu();
@@ -71,5 +79,22 @@ function setupMenu() {
     }
   });
 }
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    const isValidTarget =
+      targetId && targetId !== '#' && document.querySelector(targetId);
+
+    if (isValidTarget) {
+      e.preventDefault();
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    } else if (targetId === '#') {
+      e.preventDefault(); // Evita scroll para topo
+    }
+  });
+});
 
 document.addEventListener('DOMContentLoaded', setupMenu);
