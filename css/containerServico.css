@@ -11,7 +11,7 @@ body {
   margin-top: 600px;
   width: 40px;
   background-color: var(--cor-vermelho);
-  color: white;
+  color: var(--cor-branco);
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-family: 'Montserrat', sans-serif;

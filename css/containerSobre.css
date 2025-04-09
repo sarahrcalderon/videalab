@@ -8,27 +8,58 @@
   --cor-roxo: #4c00b9;
   --cor-cinzaMedio: #838383;
 }
-#servico {
-  height: 100vh;
-}
+
 .containerSobre {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 250px;
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  gap: 40px;
+  align-items: center;
 }
+
+.faixaLateral1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background-color: var(--cor-vermelho);
+  color: var(--cor-branco);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.conteudoEscrito {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
 .titulo1 {
   font-size: 2rem;
   color: var(--cor-preto);
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   padding-left: 15px;
-  margin-bottom: 15px;
   border-left: 5px solid var(--cor-vermelho);
 }
+
 .subTituloSobre {
   font-size: 1.2rem;
-  margin: 0;
+  margin: 20px 0;
   color: var(--cor-cinzaMedio);
   font-family: 'Montserrat', sans-serif;
   padding-left: 15px;
@@ -36,14 +67,13 @@
 
 .texto {
   font-size: 0.9rem;
-  margin: 0;
   color: var(--cor-cinzaMedio);
   font-family: 'Montserrat', sans-serif;
   padding-left: 15px;
+  margin-bottom: 30px;
 }
 
 .iconesDescricao {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -76,20 +106,34 @@
   margin: 0;
 }
 
-.grupoImagens {
+.imagemMockup {
+  flex: 1 1 55%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-.imagem {
-  flex: 1 1 300px;
-  max-width: 500px;
+  align-items: center;
+  transform: translateY(-30px);
 }
 
-.imagem img {
-  width: 100%;
+.imagemMockup img {
+  max-width: 80%;
   height: auto;
-  display: block;
+  object-fit: contain;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .containerSobre {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .conteudoEscrito,
+  .imagemMockup {
+    flex: 1 1 100%;
+    margin-left: 0;
+  }
+
+  .imagemMockup {
+    margin-top: 40px;
+  }
 }
