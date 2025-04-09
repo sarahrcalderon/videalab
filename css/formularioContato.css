@@ -34,19 +34,7 @@ fieldset {
   margin: 15px 0;
 }
 
-fieldset > div {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1rem;
-  line-height: 1;
-}
-input[type='checkbox'] {
-  pointer-events: auto !important;
-  opacity: 1 !important;
-}
-
-fieldset input[type='checkbox'] {
+.input[type='checkbox'] {
   margin: 0;
   appearance: auto; /* Garante aparência padrão e evita bugs de alinhamento */
 }
@@ -56,6 +44,13 @@ fieldset label {
   font-size: 0.8rem;
   line-height: 1;
   font-family: 'Montserrat', sans-serif;
+}
+.input-com-placeholder::placeholder {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-cinzaBaixo);
 }
 
 legend {

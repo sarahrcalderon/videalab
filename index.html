@@ -64,6 +64,16 @@
     <div class="scroll-progress"></div>
     <div class="linha-topo"></div>
     <header>
+      <nav class="menu" id="menu">
+        <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
       <button type="button "class="menu-btn" id="menuBtn" aria-label="Abrir menu">
         <i class="bi bi-list"></i>
       </button>
@@ -78,7 +88,7 @@
       </div>
       <div class="fraseInicio">
         <h1>Você cria,a gente empodera<span>!</span></h1>
-        <a href="#contato" type="button "class="botaoSaibaMais">Saiba Mais</a>
+        <button class="botaoSaibaMais" type="button" data-scroll="#contato">Saiba Mais</button>
       </div>
       <div class="fraseInicio1">
         <h2>Presença digital  —  do seu jeito, no seu ritmo.</h2><span>
@@ -94,19 +104,6 @@
       <img src="https://plus.unsplash.com/premium_photo-1711987232813-76c72608b745?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto 3">
       <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto 4">
     </div>
-   
-    
-    <nav class="menu" id="menu">
-      <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
-        <i class="bi bi-x-lg"></i>
-      </button>
-      <ul>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
     <section id="servicos">
       <div class="faixaLateral">WORKS</div>
       <div class="containerServicos">
@@ -227,19 +224,19 @@
       <div class="direita">
         <div>
           <h4>Clareza</h4>
-          <p class="clareza">texto</p>
+          <p class="clareza">Vídeos que comunicam. Design que simplifica. Mensagens que convertem.</p>
         </div>
         <div>
           <h4>Integridade</h4>
-          <p class="integridade">texto</p>
+          <p class="integridade">Entrega de projetos com excelência técnica e transparência em cada etapa.</p>
         </div>
         <div>
           <h4>Criatividade</h4>
-          <p class="criatividade">texto</p>
+          <p class="criatividade">Soluções visuais únicas para destacar seu produto.</p>
         </div>
         <div>
           <h4>Responsabilidade</h4>
-          <p class="responsabilidade">texto</p>
+          <p class="responsabilidade">Planejamento, prazos e entregas alinhadas desde o início.</p>
         </div>
       </div>
     </section>
@@ -255,7 +252,7 @@
           <label for="nome">Nome <span aria-hidden="true">*</span></label>
           <div class="inputIconWrapper">
             <i class="fa fa-user icon" aria-hidden="true"></i>
-            <input type="text" id="nome" name="nome" required autocomplete="name" />
+            <input  placeholder="Digite seu e-mail"   class="input-com-placeholder" type="text" id="nome" name="nome" required autocomplete="name" />
           </div>
     
           <label for="email">E-mail <span aria-hidden="true">*</span></label>
@@ -267,9 +264,24 @@
               name="email"
               required
               autocomplete="email"
+              placeholder="Digite seu e-mail"
+              class="input-com-placeholder"
             />
           </div>
-          <fieldset>
+          <label for="telefone">Telefone <span class="opcional">(opcional)</span></label>
+            <div class="inputIconWrapper">
+              <i class="fa fa-phone icon" aria-hidden="true"></i>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                autocomplete="tel"
+                placeholder="Digite seu telefone"
+                class="input-com-placeholder"
+              />
+            </div>
+
+          <!-- <fieldset>
             <legend>Melhor forma de contato</legend>
             <div>
               <input
@@ -277,9 +289,9 @@
                 id="contato-whatsapp"
                 name="preferencia_contato[]"
                 value="Whatsapp"
-                checked
+             
               />
-              <label for="contato-whatsapp">WhatsApp</label>
+              <label id="contato-whatsapp">WhatsApp</label>
             </div>
             <div>
               <input
@@ -288,17 +300,18 @@
                 name="preferencia_contato[]"
                 value="Email"
               />
-              <label for="contato-email">E-mail</label>
+              <label  id="contato-email">E-mail</label>
             </div>
-          </fieldset>
+          </fieldset> -->
           <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
-          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          <textarea  id="mensagem" name="mensagem" rows="5" required></textarea>
           <!-- Proteção contra spam -->
           <input
             type="text"
             name="_honey"
             style="display: none"
             aria-hidden="true"
+         
           />
           <input type="hidden" name="_captcha" value="false" />
           <input
@@ -340,8 +353,6 @@
     </footer> 
     <script src="./js/script.js"></script>
     <script src="./js/menu.js"></script>
-    <script src="./js/fraseEfeito.js"></script>
-    <script src="./js/efeitoImagem.js"></script>
     <script src="./js/scrollBar.js"></script>
     <script src="./js/formulario.js"></script>
     <script src="./js/evitaScrollClick.js"></script>

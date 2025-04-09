@@ -5,17 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-:root {
-  --cor-preto: #111111;
-  --cor-branco: #f4f4f4;
-  --cor-amarelo: #ffc900;
-  --cor-laranja: #ff6600;
-  --cor-vermelho: #ff0029;
-  --cor-violeta: #b300d4;
-  --cor-roxo: #4c00b9;
-  --cor-vermelhoMedio: #ca102f;
-}
-
 body.menu-aberto {
   position: fixed;
   width: 100%;

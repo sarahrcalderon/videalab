@@ -1,14 +1,3 @@
-:root {
-  --cor-preto: #111111;
-  --cor-branco: #f4f4f4;
-  --cor-amarelo: #ffc900;
-  --cor-laranja: #ff6600;
-  --cor-vermelho: #ff0029;
-  --cor-violeta: #b300d4;
-  --cor-roxo: #4c00b9;
-  --cor-cinzaMedio: #838383;
-}
-
 .containerSobre {
   display: flex;
   position: relative;
