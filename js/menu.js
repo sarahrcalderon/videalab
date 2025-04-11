@@ -1,35 +1,55 @@
 document.addEventListener('DOMContentLoaded', function () {
   const menu = document.getElementById('menu');
-  const menuBtn = document.getElementById('menuBtn');
-  const closeBtn = document.getElementById('closeBtn');
+  const botaoMenu = document.getElementById('menuBtn');
+  const botaoFechar = document.getElementById('closeBtn');
+  const linksNavegacao = document.querySelectorAll('#menu a[href^="#"]'); // Seleciona todos os links âncora no menu
 
-  // Abrir menu
-  menuBtn.addEventListener('click', function (e) {
+  const abrirMenu = function (e) {
     e.stopPropagation();
-    menu.classList.add('open'); // <-- alterado para 'open'
-    document.body.classList.add('menu-aberto'); // bloqueia rolagem
-  });
+    menu.classList.add('open');
+    document.body.classList.add('menu-aberto');
+  };
 
-  // Fechar menu com botão "X"
-  closeBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    menu.classList.remove('open'); // <-- alterado para 'open'
+  const fecharMenu = function () {
+    menu.classList.remove('open');
     document.body.classList.remove('menu-aberto');
+  };
+
+  botaoMenu.addEventListener('click', abrirMenu);
+
+  botaoFechar.addEventListener('click', function (e) {
+    e.stopPropagation();
+    fecharMenu();
   });
 
-  // Fechar menu clicando fora dele
   document.addEventListener('click', function (e) {
-    const isClickInsideMenu = menu.contains(e.target);
-    const isClickOnButton = menuBtn.contains(e.target);
+    const cliqueDentroDoMenu = menu.contains(e.target);
+    const cliqueNoBotaoMenu = botaoMenu.contains(e.target);
 
-    if (!isClickInsideMenu && !isClickOnButton) {
-      menu.classList.remove('open'); // <-- alterado para 'open'
-      document.body.classList.remove('menu-aberto');
+    if (!cliqueDentroDoMenu && !cliqueNoBotaoMenu) {
+      fecharMenu();
     }
   });
 
-  // Impede que cliques dentro do menu fechem ele
   menu.addEventListener('click', function (e) {
     e.stopPropagation();
+  });
+
+  linksNavegacao.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const idAlvo = this.getAttribute('href');
+      fecharMenu();
+
+      // Rola suavemente para a seção após um pequeno delay
+      setTimeout(() => {
+        const secaoAlvo = document.querySelector(idAlvo);
+        if (secaoAlvo) {
+          secaoAlvo.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }
+      }, 300);
+    });
   });
 });

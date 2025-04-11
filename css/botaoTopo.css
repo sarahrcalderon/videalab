@@ -1,0 +1,35 @@
+#botaoScroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--cor-laranja);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#botaoScroll:hover {
+  background-color: var();
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#botaoScroll i {
+  font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
+  #botaoScroll {
+    right: 5%;
+    bottom: 10px;
+  }
+}

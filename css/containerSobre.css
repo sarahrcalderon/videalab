@@ -119,9 +119,29 @@
   .conteudoEscrito,
   .imagemMockup {
     flex: 1 1 100%;
-    margin-left: 0;
+    margin-left: 30px;
   }
-
+  .titulo1 {
+    margin-left: 20px;
+  }
+  .faixaLateral1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
   .imagemMockup {
     margin-top: 40px;
   }

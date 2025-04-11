@@ -7,6 +7,21 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = `${scrollPercent}%`;
   }
 });
+document.addEventListener('click', function (e) {
+  const isLink = e.target.closest('a');
+  const isButton = e.target.closest('button');
+
+  // Se for link com hash válido, deixa passar
+  if (isLink && isLink.getAttribute('href')?.startsWith('#')) {
+    return; // permite o clique normal
+  }
+
+  if (!isLink && !isButton) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    console.log('Clique bloqueado para evitar scroll');
+  }
+});
 
 document.addEventListener(
   'click',

@@ -23,7 +23,7 @@
 ::-webkit-scrollbar-track {
   background: linear-gradient(
     to bottom,
-    #f4f4f4,
+    #4c00b9,
     #ffc900,
     #ff6600,
     #ff0029,
@@ -33,13 +33,13 @@
 }
 
 /* barra (fundo) */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: #f4f4f400;
-}
+} */
 
 /* Parte que se move (o "thumb") */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #4c00b9, #ff0029, #b300d4);
   border-radius: 10px;
-  border: 1px solid #05050500; /* borda opcional p/ separação */
-}
+  border: 1px solid #05050500;
+} */

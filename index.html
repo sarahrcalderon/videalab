@@ -57,11 +57,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="icon" type="image/png" sizes="16x16" href="./FAVICON.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
     <link rel="stylesheet" href="./css/global.css" />
   </head>
   <body>
-    <div class="scroll-progress"></div>
+    <!-- <div class="scroll-progress"></div> -->
     <div class="linha-topo"></div>
     <header>
       <nav class="menu" id="menu">
@@ -105,11 +105,11 @@
       <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto 4">
     </div>
     <section id="servicos">
-      <div class="faixaLateral">WORKS</div>
+      <div class="faixaLateral">TRABALHOS</div>
       <div class="containerServicos">
         <div class="galeria-wrapper">
           <div class="Titulo">
-            <h2>Nossos trabalhos</h2>
+            <h2>O que fazemos</h2>
             <p class="subTitulo">
               Criação de vídeos, edição e design para marcas em crescimento.
             </p>
@@ -137,7 +137,7 @@
                 <div class="video-expanded"></div>
               </div>
               <video
-                src="https://cdn.pixabay.com/video/2023/10/20/185787-876545918_small.mp4"
+                src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1744243303/Nutri%C3%A7%C3%A3o_VIDEA_vyc0yi.mp4"
                 controls
                 muted
                 loop
@@ -174,9 +174,9 @@
 
     <section id="sobre">
       <div class="containerSobre">
-        <div class="faixaLateral1">about</div> 
+        <div class="faixaLateral1">SOBRE</div> 
         <div class="conteudoEscrito">
-          <h2 class="titulo1">Sobre nós</h2>
+          <h2 class="titulo1">Quem somos</h2>
           <p class="subTituloSobre">Atuamos com design e suas tecnologias há anos no mercado digital.</p>
           <p class="texto">
             Unimos criatividade e estratégia para ajudar empresas que se sentem
@@ -214,8 +214,6 @@
         </div>
       </div>
     </section>
-    
-    
 
     <section class="objetivos-container">
       <div class="esquerda">
@@ -241,7 +239,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="titulo-contato" id="contato">
+    <section class="sessaoComFaixa" aria-labelledby="titulo-contato" id="contato">
       <div class="entreEmContato">
         <h3 id="titulo-contato" class="contatoTitulo">Contato</h3>
         <form
@@ -325,6 +323,10 @@
         </form>
       </div>
     </section>
+    <button id="botaoScroll">
+      <i class="fas fa-arrow-down"></i>
+    </button>    
+  
     
     <footer>
       <div class="containerFooter">
@@ -356,5 +358,6 @@
     <script src="./js/scrollBar.js"></script>
     <script src="./js/formulario.js"></script>
     <script src="./js/evitaScrollClick.js"></script>
+    <script src="./js/botaoTopo.js"></script>
   </body>
 </html>

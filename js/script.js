@@ -1,19 +1,15 @@
 import { setupMenu } from './menu';
-import { aparecerImagem } from './efeitoImagem';
 import { scrollBar } from './scrollBar';
 import { formulario } from './formulario';
-import { fraseEfeito } from './fraseEfeito ';
 import { evitaScrollClick } from './evitaScrollClick';
-// import { includeHTML } from './includeHTML';
+import { botaoTopo } from './botaoTopo';
 
 document.addEventListener('DOMContentLoaded', () => {
   setupMenu();
-  aparecerImagem();
   scrollBar();
-  fraseEfeito();
   formulario();
   evitaScrollClick();
-  // includeHTML();
+  botaoTopo();
 
   // Outras inicializações podem vir aqui
 });
