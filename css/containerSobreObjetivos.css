@@ -6,6 +6,20 @@
   gap: 2rem;
   padding: 2rem;
 }
+.linha-horizontal {
+  display: block;
+  height: 1px;
+  background-color: var(--cor-vermelho);
+  width: 0;
+  opacity: 0;
+  transition: width 1s ease, opacity 1s ease;
+  grid-column: 1 / -1;
+}
+
+.linha-horizontal.ativo {
+  width: 100%;
+  opacity: 1;
+}
 
 .tituloSobre {
   font-size: 2.5rem;
@@ -20,7 +34,6 @@
 .esquerda {
   flex: 1;
   font-size: 2rem;
-  font-weight: bold;
   max-width: 40%;
 }
 
@@ -32,6 +45,10 @@
   margin-top: 40px;
 }
 
+.direita p {
+  font-size: 1.2rem;
+}
+
 .direita div {
   padding: 1rem;
   border-radius: 8px;
@@ -39,8 +56,20 @@
 }
 
 .clareza {
-  font-size: 0.9rem;
-  color: var(--cor-CinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-cinzaMedio);
+}
+.integridade {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-cinzaMedio);
+}
+.criatividade {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-cinzaMedio);
+}
+.responsabilidade {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--cor-cinzaMedio);
 }
 
 .tituloSobre {

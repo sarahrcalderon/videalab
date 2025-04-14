@@ -9,4 +9,161 @@
   --cor-vermelhoMedio: #ca102f;
   --cor-cinza: #e6e6e6;
   --cor-cinzaBaixo: #e2e2e2;
+  --cor-fundoDarkThema: #161616;
+  --cor-fundoContatoDarkThema: #272727;
+  --cor-detalheDarkThema: #303030;
+  --cor-letrasDarkThema: #a9a9a9;
+  --cor-iconeDarkThema: #4b4b4b;
+}
+
+.body.dark-theme .menu-btn i {
+  color: var(--cor-iconeDarkThema);
+}
+body.dark-theme {
+  background-color: var(--cor-fundoDarkThema);
+  color: var(--cor-letrasDarkThema);
+}
+body.dark-theme .itemIcone i {
+  color: var(--cor-iconeDarkThema);
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme .menu,
+body.dark-theme .containerServicos,
+body.dark-theme .containerSobre,
+body.dark-theme .objetivos-container,
+body.dark-theme .sessaoComFaixa {
+  background-color: var(--cor-fundoDarkThema);
+  color: var(--cor-letrasDarkThema);
+}
+
+body.dark-theme .menu ul li a,
+body.dark-theme nav a,
+body.dark-theme .copy,
+body.dark-theme .fraseInicio h1,
+body.dark-theme .fraseInicio1 h2,
+body.dark-theme .Titulo h2,
+body.dark-theme .subTitulo,
+body.dark-theme .descricaoServico,
+body.dark-theme .titulo1,
+body.dark-theme .subTituloSobre,
+body.dark-theme .texto,
+body.dark-theme .tituloSobre,
+body.dark-theme .objetivos-container h4,
+body.dark-theme .objetivos-container p,
+body.dark-theme .contatoTitulo {
+  color: var(--cor-letrasDarkThema);
+}
+body.dark-theme .botaoSaibaMais {
+  background-color: var(--cor-iconeDarkThema);
+  color: var(--cor-letrasDarkThema);
+}
+body.dark-theme .linha-topo,
+body.dark-theme .faixaLateral,
+body.dark-theme .faixaLateral1,
+body.dark-theme .linha-horizontal {
+  background-color: var(--cor-detalheDarkThema);
+}
+
+/* Botões */
+body.dark-theme button,
+body.dark-theme #theme-toggle {
+  color: var(--cor-letrasDarkThema);
+  border: none;
+}
+
+body.dark-theme .entreEmContato {
+  background-color: var(--cor-fundoContatoDarkThema);
+  color: var(--cor-letrasDarkThema);
+}
+
+body.dark-theme .entreEmContato input,
+body.dark-theme .entreEmContato textarea,
+body.dark-theme .entreEmContato button {
+  background-color: var(--cor-detalheDarkThema);
+  color: var(--cor-letrasDarkThema);
+}
+
+body.dark-theme .entreEmContato input:focus,
+body.dark-theme .entreEmContato textarea:focus {
+  border-color: var(--cor-laranja);
+}
+
+body.dark-theme button:hover,
+body.dark-theme .botaoSaibaMais:hover {
+  color: var(--cor-branco);
+}
+
+/* Seção de Contato */
+body.dark-theme .sessaoComFaixa {
+  color: var(--cor-letrasDarkThema);
+}
+
+body.dark-theme .sessaoComFaixa label,
+body.dark-theme .sessaoComFaixa .contatoTitulo {
+  color: var(--cor-letrasDarkThema);
+}
+
+body.dark-theme .inputIconWrapper i {
+  color: var(--cor-letrasDarkThema);
+  margin-right: 0.5rem;
+}
+
+body.dark-theme textarea {
+  color: var(--cor-letrasDarkThema);
+  border-radius: 6px;
+  padding: 0.6rem;
+  resize: vertical;
+}
+
+body.dark-theme .formularioContato button[type='submit'] {
+  background-color: var(--cor-fundoDarkThema);
+  color: var(--cor-letrasDarkThema);
+
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .formularioContato button[type='submit']:hover {
+  background-color: #404040;
+}
+
+/* Botão de alternância */
+.temaBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: inherit;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.temaBtn i {
+  transition: transform 0.3s ease;
+}
+
+body.dark-theme .temaBtn i {
+  transform: rotate(180deg);
+}
+
+/*footer*/
+body.dark-theme footer {
+  background: linear-gradient(135deg, #1c1c1c, #111);
+}
+
+body.dark-theme .containerFooter nav ul li a:hover {
+  color: var(--cor-laranja);
+}
+
+body.dark-theme .social-links a {
+  color: var(--cor-branco);
+}
+
+body.dark-theme .social-links a:hover {
+  color: var(--cor-laranja);
 }
