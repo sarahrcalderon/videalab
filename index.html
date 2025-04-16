@@ -29,16 +29,6 @@
     />
     <meta property="og:url" content="https://www.videalab.com.br" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Design | Criação & Edição Vídeos" />
-    <meta
-      name="twitter:description"
-      content="Serviços profissionais para transformar sua marca com identidade visual única e vídeos impactantes."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.seusite.com/assets/imagem-destacada.jpg"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -76,6 +66,7 @@
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#sobre">Sobre Nós</a></li>
           <li><a href="#contato">Contato</a></li>
+          <li><a href="#" id="acessibilidadeBtn">Acessibilidade</a></li>
         </ul>
       </nav>
       <button type="button "class="menu-btn" id="menuBtn" aria-label="Abrir menu">
@@ -94,7 +85,7 @@
       </div>
       <div class="fraseInicio">
         <h1>Você cria,a gente empodera<span>!</span></h1>
-        <button class="botaoSaibaMais" type="button" data-scroll="#contato">Saiba Mais</button>
+        <!-- <button class="botaoSaibaMais" type="button" data-scroll="#contato">Saiba Mais</button> -->
       </div>
       <div class="fraseInicio1">
         <h2>Presença digital  —  do seu jeito, no seu ritmo.</h2><span>
@@ -115,10 +106,10 @@
       <div class="containerServicos">
         <div class="galeria-wrapper">
           <div class="Titulo">
-            <h2>O que fazemos</h2>
+            <h2>O que fazemos</h2><br>
             <p class="subTitulo">
               Criação de vídeos, edição e design para marcas em crescimento.
-            </p>
+            </p><br>
             <p class="descricaoServico">
               Ajudamos marcas que estão entrando no mercado — ou que precisam se
               reinventar nas redes sociais — com serviços completos de criação e
@@ -216,7 +207,7 @@
           </div>
         </div>
         <div class="imagemMockup">
-          <img src="./assets/img/celularInstagram.png" alt="Mockup de celular" />
+          <img id="mockup-image" src="./assets/img/celularInstagram.png" alt="Mockup de celular" />
         </div>
       </div>
     </section>
@@ -378,5 +369,7 @@
     <script src="./js/botaoTopo.js"></script>
     <script src="./js/efeitoLinhaObjetivo.js"></script>
     <script src="./js/tema.js"></script>
+    <script src="./js/acessibilidadeMenu.js"></script>
+
   </body>
 </html>

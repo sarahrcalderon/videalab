@@ -16,6 +16,8 @@
   --cor-iconeDarkThema: #4b4b4b;
 }
 
+/****************************TEMA DARK********************/
+
 .body.dark-theme .menu-btn i {
   color: var(--cor-iconeDarkThema);
 }
@@ -25,6 +27,10 @@ body.dark-theme {
 }
 body.dark-theme .itemIcone i {
   color: var(--cor-iconeDarkThema);
+}
+body.dark-theme #botaoScroll {
+  background-color: var(--cor-iconeDarkThema);
+  color: var(--cor-letrasDarkThema);
 }
 
 body.dark-theme header,

@@ -132,6 +132,15 @@ button {
   background-color: #574fd6;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* espaço pro header fixo */
+}
+
+body.acessibilidade-ativa html {
+  scroll-padding-top: 220px; /* mais espaço com fonte grande */
+}
+
 @media (max-width: 768px) {
   .entreEmContato {
     padding: 20px;

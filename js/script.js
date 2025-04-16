@@ -5,7 +5,7 @@ import { evitaScrollClick } from './evitaScrollClick';
 import { botaoTopo } from './botaoTopo';
 import { efeitoLinhaObjetivo } from './efeitoLinhaObjetivo';
 import { tema } from './tema';
-
+import { acessibilidadeMenu } from './acessibilidadeMenu';
 document.addEventListener('DOMContentLoaded', () => {
   setupMenu();
   scrollBar();
@@ -14,6 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   efeitoLinhaObjetivo();
   botaoTopo();
   tema();
-
-  // Outras inicializações podem vir aqui
+  acessibilidadeMenu();
 });
