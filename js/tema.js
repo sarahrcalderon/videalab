@@ -19,8 +19,8 @@ function setTheme(theme) {
   if (mockupImage) {
     mockupImage.src =
       theme === 'dark'
-        ? './assets/img/celularInstagram_DARK.png'
-        : './assets/img/celularInstagram.png';
+        ? './assets/img/celularInstagram_DARK.webp'
+        : './assets/img/celularInstagram.webp';
   }
 
   localStorage.setItem('theme', theme);
