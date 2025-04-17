@@ -2,7 +2,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .sessaoComFaixa {
+  min-height: 100vh;
+  padding-top: 4rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -87,7 +92,8 @@ fieldset {
   left: 15px;
   transform: translateY(-50%);
   color: var(--cor-roxo);
-  font-size: 1rem;
+  font-size: 16px;
+  pointer-events: none;
 }
 
 .inputIconWrapper input {
@@ -141,6 +147,69 @@ body.acessibilidade-ativa html {
   scroll-padding-top: 220px; /* mais espaço com fonte grande */
 }
 
+/* iPhone SE e telas até 400px */
+@media (max-width: 400px) {
+  .entreEmContato {
+    padding: 20px 15px;
+    margin: 1rem 10px;
+  }
+
+  .contatoTitulo {
+    font-size: 1.2rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.95rem;
+  }
+}
+
+/* iPhone 14 Pro Max e celulares maiores */
+@media (max-width: 440px) {
+  .entreEmContato {
+    padding: 24px 18px;
+    margin: 1.5rem 10px;
+  }
+
+  .contatoTitulo {
+    font-size: 1.3rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
+}
+/*************NOTEBOOK PEQUENO*/
+@media (max-width: 1366px) {
+  footer {
+    margin-top: 200px;
+  }
+  .entreEmContato {
+    max-width: 600px;
+    margin: 2rem auto;
+    position: relative;
+    top: 80px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) and (min-height: 800px) {
+  .sessaoComFaixa {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .entreEmContato {
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 768px) {
   .entreEmContato {
     padding: 20px;
@@ -155,5 +224,37 @@ body.acessibilidade-ativa html {
   textarea,
   button {
     font-size: 1rem;
+  }
+}
+@media (max-width: 820px) {
+  .sessaoComFaixa {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .entreEmContato {
+    margin: 0;
+    margin-top: 200px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contatoTitulo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) and (min-height: 800px) {
+  .sessaoComFaixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

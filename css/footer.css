@@ -69,3 +69,125 @@ footer {
   font-family: 'Atkinson Hyperlegible Mono', sans-serif;
   opacity: 0.8;
 }
+@media (max-width: 400px) {
+  footer {
+    padding: 30px 10px;
+  }
+
+  .containerFooter {
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+  }
+
+  .containerFooter nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .containerFooter nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  .containerFooter nav ul li a {
+    font-size: 1rem;
+  }
+
+  .copy {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 440px) {
+  footer {
+    padding: 30px 10px;
+  }
+
+  .containerFooter {
+    padding: 0 10px;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-links a {
+    font-size: 1.4rem;
+  }
+
+  .containerFooter nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .containerFooter nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  .containerFooter nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  .copy {
+    font-size: 0.75rem;
+  }
+}
+
+/* Responsividade para telas menores como Samsung Galaxy S8 (360x760px) */
+@media (max-width: 360px) {
+  footer {
+    padding: 30px 10px;
+  }
+
+  .containerFooter {
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-direction: row; /* Agora os ícones sociais estarão lado a lado */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 15px;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+
+  .containerFooter nav ul {
+    display: block;
+    padding: 0;
+    gap: 15px;
+  }
+
+  .containerFooter nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  .containerFooter nav ul li a {
+    font-size: 1.1rem;
+  }
+
+  .copy {
+    font-size: 0.7rem;
+  }
+}

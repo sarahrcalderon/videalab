@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .topo {
   position: relative;
   width: 100%;
@@ -73,8 +85,11 @@
   display: flex;
   gap: 16px;
   overflow-x: auto;
+  height: auto;
   padding: 16px;
-  margin-left: 250px;
+  margin-left: 200px;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .galeriaApresentacao img {
@@ -86,27 +101,69 @@
   border: 2px solid #ccc;
 }
 
-@media (max-width: 768px) {
-  .fraseInicio,
-  .fraseInicio1,
+@media (max-width: 1024px) {
+  .fraseInicio {
+    margin-left: 40px;
+    margin-top: 200px;
+  }
+
+  .fraseInicio h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .fraseInicio1 {
+    margin-left: 40px;
+  }
+
+  .fraseInicio1 h2 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .botaoSaibaMais {
+    right: 100px;
+  }
+
   .galeriaApresentacao {
-    flex-direction: column;
+    margin-left: 40px;
+  }
+}
+
+/* Já cobre 778x849 */
+@media (max-width: 768px) {
+  .fraseInicio {
     margin-left: 0;
     margin-top: 40px;
     align-items: center;
     text-align: center;
   }
 
-  .fraseInicio h1,
+  .fraseInicio h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .fraseInicio1 {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
   .fraseInicio1 h2 {
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.2;
   }
 
   .galeriaApresentacao {
+    flex-direction: column;
+    margin-left: 0;
     align-items: center;
     justify-content: center;
   }
+
   .botaoSaibaMais {
     position: static;
     margin: 40px auto 0 auto;
