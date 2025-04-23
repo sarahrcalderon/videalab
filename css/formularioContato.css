@@ -3,15 +3,65 @@ body {
   padding: 0;
 }
 
-.sessaoComFaixa {
+/* .sessaoComFaixa {
   min-height: 60vh;
   box-sizing: border-box;
   transition: all 0.3s ease;
   position: relative;
+} */
+.contatoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.esquerda {
+  flex: 1 1 300px;
+  max-width: 500px;
 }
 
 .entreEmContato {
-  max-width: 600px;
+  flex: 1 1 400px;
+  max-width: 700px;
+}
+
+.sessaoComFaixa {
+  min-height: 100vh;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+}
+.esquerdaContato {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 20px 0;
+}
+.subtituloContato {
+  font-size: 1rem;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+.tituloContato {
+  font-size: 2.5rem;
+  padding-left: 15px;
+  border-left: 5px solid var(--cor-vermelho);
+  color: var(--cor-preto);
+  margin-top: 150px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.entreEmContato {
+  width: 100%;
+  max-width: 700px;
   margin: 2.2rem auto;
   background-color: var(--cor-branco);
   padding: 30px;

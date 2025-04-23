@@ -38,7 +38,7 @@ body {
 
 .fraseInicio h1 {
   font-size: 3rem;
-  line-height: 0.3;
+
   color: var(--cor-preto);
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -61,6 +61,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-variant: small-caps;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .botaoSaibaMais {
@@ -89,6 +90,8 @@ body {
   gap: 16px;
   overflow-x: auto;
   height: auto;
+
+  position: relative;
   padding: 16px 40px;
   max-width: 100vw;
   box-sizing: border-box;

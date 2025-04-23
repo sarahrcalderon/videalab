@@ -6,6 +6,7 @@ import { botaoTopo } from './botaoTopo';
 import { efeitoLinhaObjetivo } from './efeitoLinhaObjetivo';
 import { tema } from './tema';
 import { acessibilidadeMenu } from './acessibilidadeMenu';
+import { efeito } from './efeito';
 document.addEventListener('DOMContentLoaded', () => {
   setupMenu();
   scrollBar();
@@ -15,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   botaoTopo();
   tema();
   acessibilidadeMenu();
+  efeito();
 });
