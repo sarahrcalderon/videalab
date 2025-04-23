@@ -15,12 +15,7 @@ body {
   justify-content: center;
   gap: 40px;
   align-items: flex-start;
-  width: 100%;
-}
-
-.esquerda {
-  flex: 1 1 300px;
-  max-width: 500px;
+  width: 90%;
 }
 
 .entreEmContato {
@@ -58,7 +53,40 @@ body {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
+.localizacao {
+  margin-top: 20px;
+  padding: 10px;
 
+  border-radius: 8px;
+}
+
+.localizacao h4 {
+  font-size: 20px;
+  color: #333;
+}
+
+.localizacao p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.localizacao a {
+  text-decoration: none;
+}
+
+.localizacaoLink button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.localizacaoLink button:hover {
+  background-color: #0056b3;
+}
 .entreEmContato {
   width: 100%;
   max-width: 700px;
