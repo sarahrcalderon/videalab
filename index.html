@@ -53,78 +53,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
   <body>
-    <div id="glass-overlay"></div>
-    <!-- <div class="scroll-progress"></div> -->
-    <div class="linha-topo"></div>
-    <button id="theme-toggle" class="temaBtn">
-      <i class="bi bi-sun" id="theme-icon"></i>
-    </button>
-    <header  role="banner">
-      <nav class="menu" id="menu" role="navigation" aria-label="Menu principal">
-        <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <ul>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#" id="acessibilidadeBtn">Acessibilidade</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-      <button type="button "class="menu-btn" id="menuBtn" aria-label="Abrir menu">
-        <i class="bi bi-list" aria-hidden="true"></i>
-      </button>
-    </header>
-    <div class="topo" role="region" aria-label="Introdução">
-      <div class="logo-container" >
-        <img
-          src="./assets/img/logotipo_videa_PRETO.svg"
-          alt="Logotipo da empresa VIDEA"
-          class="logo"
-          id="logo"
-        />
+ <header role="banner">
+  <button id="theme-toggle" class="temaBtn" aria-label="Alternar tema">
+  <i class="bi bi-sun" id="theme-icon"></i>
+</button>
+  <nav class="nav-wrapper" role="navigation" aria-label="Menu principal">
+    <div class="nav-content">
+      <div class="nav-left">
+        <a href="/">
+          <img
+            src="./assets/img/logotipo_videa_PRETO.svg"
+            alt="Logotipo da empresa VIDEA"
+            class="logo"
+            id="logo"
+          />
+        </a>
       </div>
+      <ul class="nav-links" id="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#" id="acessibilidadeBtn">Acessibilidade</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+    <div class="topo" role="region" aria-label="Introdução">
       <div class="fraseInicio">
         <h1 id="tituloPrincipal">Miopia digital? Nunca mais<span aria-hidden="true">!</span></h1>
-        <!-- <button class="botaoSaibaMais" type="button" data-scroll="#contato">Saiba Mais</button> -->
       </div>
       <div class="fraseInicio1">
         <h2 id="subtitulo">Presença focada — do seu jeito, no seu ritmo.</h2><span>
       </div>
     </div>
-    <div class="galeriaApresentacao" role="region" aria-label="Galeria de imagens de apresentação">
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>      
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>    
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>    
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>    
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>    
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>    
-      <a href="https://www.instagram.com/videalab" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
-             alt="Design criativo com formas abstratas" loading="lazy" role="img">
-      </a>    
-    </div>
-
     <section id="servicos" role="region" aria-labelledby="titulo-servicos">
-      <div class="faixaLateral">TRABALHOS</div>
       <div class="containerServicos">
         <div class="galeria-wrapper">
           <div class="Titulo">
@@ -199,7 +167,6 @@
 
     <section id="sobre" role="region" aria-labelledby="titulo-sobre">
       <div class="containerSobre">
-        <div class="faixaLateral1">SOBRE</div> 
         <div class="conteudoEscrito">
           <h2 class="titulo1">Quem somos</h2>
           <p class="subTituloSobre">Atuamos com design e suas tecnologias há anos no mercado digital.</p>
@@ -239,7 +206,6 @@
         </div>
       </div>
     </section>
-
     <section class="objetivos-container" role="region" aria-labelledby="titulo-objetivos">
       <div class="esquerda">
         <h3 class="tituloSobre">Objetivos por trás do nosso trabalho</h3>
@@ -265,7 +231,6 @@
         <span class="linha-horizontal"></span>
       </div>
     </section>
-
     <section class="sessaoComFaixa" role="form"  aria-labelledby="titulo-contato" id="contato">
       <div class="contatoGrid">
         <div class="esquerda">
@@ -277,9 +242,7 @@
           <div class="localizacao">
             <h4>Onde estamos</h4>
             <p><i class="fas fa-map-marker-alt"></i> Porto Alegre, Rio Grande Do Sul, Brasil </p>
-      
-        </div>
-      
+        </div> 
       </div>
       <div class="entreEmContato">
         <h3 id="titulo-contato" class="contatoTitulo">Contato</h3>
@@ -293,7 +256,6 @@
             <i class="fa fa-user icon" aria-hidden="true"></i>
             <input  placeholder="Digite seu e-mail"   class="input-com-placeholder" type="text" id="nome" name="nome" required autocomplete="name" />
           </div>
-    
           <label for="email">E-mail <span aria-hidden="true">*</span></label>
           <div class="inputIconWrapper">
             <i class="fa fa-envelope icon" aria-hidden="true"></i>
@@ -319,29 +281,6 @@
                 class="input-com-placeholder"
               />
             </div>
-
-          <!-- <fieldset>
-            <legend>Melhor forma de contato</legend>
-            <div>
-              <input
-                type="checkbox"
-                id="contato-whatsapp"
-                name="preferencia_contato[]"
-                value="Whatsapp"
-             
-              />
-              <label id="contato-whatsapp">WhatsApp</label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                id="contato-email"
-                name="preferencia_contato[]"
-                value="Email"
-              />
-              <label  id="contato-email">E-mail</label>
-            </div>
-          </fieldset> -->
           <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
           <textarea  id="mensagem" name="mensagem" rows="5" required></textarea>
           <!-- Proteção contra spam -->
@@ -402,7 +341,6 @@
         </p>
       </div>
     </footer> 
-    
     <script src="./js/script.js" defer></script>
     <script src="./js/menu.js"></script>
     <script src="./js/scrollBar.js"></script>
@@ -413,8 +351,5 @@
     <script src="./js/tema.js"></script>
     <script src="./js/acessibilidadeMenu.js"></script>
     <script src="./js/efeito.js"> </script>
-    
-
-
   </body>
 </html>

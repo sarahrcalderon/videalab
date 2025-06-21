@@ -8,25 +8,6 @@
   align-items: center;
 }
 
-.faixaLateral1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 40px;
-  background-color: var(--cor-vermelho);
-  color: var(--cor-branco);
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
 .conteudoEscrito {
   flex: 1 1 45%;
   display: flex;

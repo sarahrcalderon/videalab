@@ -1,45 +1,49 @@
-const botaoScroll = document.getElementById('botaoScroll');
-const icone = botaoScroll.querySelector('i');
+document.addEventListener('DOMContentLoaded', function () {
+  const menu = document.getElementById('menu');
+  const botaoMenu = document.getElementById('menuBtn');
+  const botaoFechar = document.getElementById('closeBtn');
+  const linksNavegacao = document.querySelectorAll('#menu a[href^="#"]');
 
-function scrollarParaBaixo() {
-  const alturaJanela = window.innerHeight;
-  window.scrollBy({
-    top: alturaJanela,
-    behavior: 'smooth',
+  const abrirMenu = function (e) {
+    e.stopPropagation();
+    menu.classList.add('open');
+    document.body.classList.add('menu-aberto');
+  };
+
+  const fecharMenu = function () {
+    menu.classList.remove('open');
+    document.body.classList.remove('menu-aberto');
+  };
+
+  botaoMenu.addEventListener('click', abrirMenu);
+  botaoFechar.addEventListener('click', function (e) {
+    e.stopPropagation();
+    fecharMenu();
   });
-}
 
-function scrollarParaCima() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
+  document.addEventListener('click', function (e) {
+    const cliqueDentroDoMenu = menu.contains(e.target);
+    const cliqueNoBotaoMenu = botaoMenu.contains(e.target);
+    if (!cliqueDentroDoMenu && !cliqueNoBotaoMenu) {
+      fecharMenu();
+    }
   });
-}
 
-botaoScroll.addEventListener('click', () => {
-  if (icone.classList.contains('fa-arrow-down')) {
-    scrollarParaBaixo();
-  } else {
-    scrollarParaCima();
-  }
+  menu.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+
+  linksNavegacao.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const idAlvo = this.getAttribute('href');
+      fecharMenu();
+      setTimeout(() => {
+        const secaoAlvo = document.querySelector(idAlvo);
+        if (secaoAlvo) {
+          secaoAlvo.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    });
+  });
 });
-
-// Troca o ícone com base no scroll
-window.addEventListener('scroll', () => {
-  const scrollTotal =
-    document.documentElement.scrollHeight - window.innerHeight;
-  const scrollAtual = window.scrollY;
-
-  if (scrollAtual + 100 >= scrollTotal) {
-    // Estamos no fim
-    icone.classList.remove('fa-arrow-down');
-    icone.classList.add('fa-arrow-up');
-  } else if (scrollAtual < 100) {
-    // No topo
-    icone.classList.remove('fa-arrow-up');
-    icone.classList.add('fa-arrow-down');
-  }
-});
-
-// Começa como seta para baixo
-icone.classList.add('fa-arrow-down');

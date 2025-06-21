@@ -7,13 +7,48 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = `${scrollPercent}%`;
   }
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const botaoScroll = document.getElementById('botaoScroll');
+  const icone = botaoScroll.querySelector('i');
+  const secoes = ['#servicos', '#sobre', '#contato', 'footer'];
+  let indiceAtual = 0;
+  let indoParaCima = false;
+
+  botaoScroll.addEventListener('click', function () {
+    if (indoParaCima) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+      icone.classList.remove('fa-arrow-up');
+      icone.classList.add('fa-arrow-down');
+      indiceAtual = 0;
+      indoParaCima = false;
+      return;
+    }
+
+    const proximaSecao = document.querySelector(secoes[indiceAtual]);
+    if (proximaSecao) {
+      proximaSecao.scrollIntoView({
+        behavior: 'smooth',
+      });
+      indiceAtual++;
+
+      if (indiceAtual >= secoes.length) {
+        icone.classList.remove('fa-arrow-down');
+        icone.classList.add('fa-arrow-up');
+        indoParaCima = true;
+      }
+    }
+  });
+});
+
 document.addEventListener('click', function (e) {
   const isLink = e.target.closest('a');
   const isButton = e.target.closest('button');
 
-  // Se for link com hash válido, deixa passar
   if (isLink && isLink.getAttribute('href')?.startsWith('#')) {
-    return; // permite o clique normal
+    return;
   }
 
   if (!isLink && !isButton) {
@@ -30,7 +65,6 @@ document.addEventListener(
       return true;
     }
 
-    // 2. Se for o botão "Saiba Mais"
     if (e.target.matches('.botaoSaibaMais')) {
       const targetId = e.target.getAttribute('data-scroll');
       if (targetId) {
