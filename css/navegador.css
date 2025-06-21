@@ -18,6 +18,7 @@ body.menu-aberto {
   right: 16px;
   z-index: 10000;
   transition: background-color 0.3s ease;
+  top: -10px;
 }
 
 .nav-wrapper {
