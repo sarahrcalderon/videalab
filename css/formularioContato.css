@@ -1,91 +1,116 @@
+/* Estilos base (mobile first) */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* .sessaoComFaixa {
-  min-height: 60vh;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  position: relative;
-} */
-.contatoGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  align-items: flex-start;
-  width: 90%;
-}
-
-.entreEmContato {
-  flex: 1 1 400px;
-  max-width: 700px;
-}
-
 .sessaoComFaixa {
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  overflow: auto;
 }
-.esquerdaContato {
+
+.contatoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.esquerda {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.entreEmContato {
+  width: 100%;
+  background-color: var(--cor-branco);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para tablets (768px ou mais) */
+@media (min-width: 768px) {
+  .contatoGrid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .esquerda {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .entreEmContato {
+    flex: 1;
+    margin: 0;
+  }
+}
+
+/* Estilos para desktop (992px ou mais) */
+@media (min-width: 992px) {
+  .sessaoComFaixa {
+    padding: 60px 40px;
+  }
+
+  .contatoGrid {
+    gap: 60px;
+  }
+
+  .esquerda {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding-right: 40px;
+  }
+
+  .entreEmContato {
+    flex: 0 0 55%;
+    max-width: 55%;
+    padding: 40px;
+  }
+}
+
+/* Estilos compartilhados */
+.tituloSobre {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--cor-preto);
+}
+
 .subtituloContato {
   font-size: 1rem;
-  padding-left: 15px;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
+
 .localizacao {
   margin-top: 20px;
   padding: 10px;
-
   border-radius: 8px;
 }
 
 .localizacao h4 {
   font-size: 20px;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .localizacao p {
   font-size: 16px;
   color: #555;
   margin: 5px 0;
-}
-
-.localizacao a {
-  text-decoration: none;
-}
-
-.localizacaoLink button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.localizacaoLink button:hover {
-  background-color: #0056b3;
-}
-.entreEmContato {
-  width: 100%;
-  max-width: 700px;
-  margin: 2.2rem auto;
-  background-color: var(--cor-branco);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .contatoTitulo {
@@ -101,57 +126,9 @@ body {
   flex-direction: column;
 }
 
-fieldset {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  border: none;
-  padding: 0;
-  margin: 15px 0;
-}
-
-.input[type='checkbox'] {
-  margin: 0;
-  appearance: auto; /* Garante aparência padrão e evita bugs de alinhamento */
-}
-
-fieldset label {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1;
-  font-family: 'Montserrat', sans-serif;
-}
-.input-com-placeholder::placeholder {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--cor-cinzaBaixo);
-}
-
-legend {
-  color: var(--cor-preto);
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 8px;
-}
-
-fieldset > div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 1rem;
-}
-
-fieldset {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .inputIconWrapper {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .inputIconWrapper .icon {
@@ -175,19 +152,14 @@ fieldset {
 }
 
 textarea {
+  width: 100%;
   padding: 12px;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   resize: vertical;
   box-sizing: border-box;
-}
-
-.inputIconWrapper input:focus,
-textarea:focus {
-  border-color: var(--cor-roxo);
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(76, 0, 185, 0.2);
+  min-height: 120px;
 }
 
 button {
@@ -202,10 +174,11 @@ button {
   transition: background-color 0.3s;
 }
 
-.formularioContato button:hover {
+button:hover {
   background-color: #574fd6;
 }
 
+/* Acessibilidade */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px;

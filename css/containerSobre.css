@@ -24,7 +24,7 @@
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   padding-left: 15px;
-  border-left: 5px solid var(--cor-vermelho);
+  border-left: 5px solid var(--cor-laranja);
 }
 
 .subTituloSobre {
