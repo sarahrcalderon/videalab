@@ -18,6 +18,15 @@
   --cor-iconeDarkThema: #4b4b4b;
 }
 
+.menu-btn,
+.close-btn,
+#theme-toggle {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 /****************************TEMA DARK********************/
 
 .body.dark-theme .menu-btn i {

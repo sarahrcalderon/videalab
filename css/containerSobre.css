@@ -12,13 +12,12 @@
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   text-align: left;
   margin-left: 200px;
   margin-top: 40px;
 }
 
-.titulo1 {
+.tituloQuemSomos {
   font-size: 2rem;
   color: var(--cor-preto);
   font-family: 'Montserrat', sans-serif;

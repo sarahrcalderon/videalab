@@ -122,12 +122,6 @@ body {
   transition: all 0.3s ease;
   z-index: -1;
 }
-.btn1:active {
-  color: var(--cor-branco);
-}
-.btn1:active::before {
-  left: 0;
-}
 
 .fraseInicio span {
   color: var(--cor-laranja);

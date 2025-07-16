@@ -1,9 +1,54 @@
-/* Estilos base (mobile first) */
-body {
-  margin: 0;
-  padding: 0;
+.esquerda {
+  width: 100%;
+  padding: 0 15px;
+  order: 1;
+  text-align: left;
 }
 
+.tituloFaleConosco {
+  font-size: 2rem;
+  border-left: 5px solid var(--cor-laranja);
+  margin-bottom: 1rem;
+  color: var(--cor-preto);
+  padding-left: 15px;
+  margin-left: 0;
+}
+
+.subtituloContato {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding-left: 0;
+}
+
+.localizacao {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.localizacao h4 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 0;
+}
+
+.localizacao p {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  padding-left: 0;
+  justify-content: flex-start;
+}
 .sessaoComFaixa {
   min-height: 100vh;
   padding: 40px 20px;
@@ -23,63 +68,36 @@ body {
   margin: 0 auto;
 }
 
-.esquerda {
-  width: 100%;
-  padding: 0 15px;
-}
-
 .entreEmContato {
   width: 100%;
   background-color: var(--cor-branco);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  order: 2;
 }
 
-/* Estilos para tablets (768px ou mais) */
+/* Estilos para desktop (768px ou mais) */
 @media (min-width: 768px) {
   .contatoGrid {
     flex-direction: row;
-    flex-wrap: nowrap;
     align-items: flex-start;
   }
 
   .esquerda {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 40px;
+    order: 1;
   }
 
   .entreEmContato {
     flex: 1;
-    margin: 0;
+    order: 2;
   }
 }
 
-/* Estilos para desktop (992px ou mais) */
-@media (min-width: 992px) {
-  .sessaoComFaixa {
-    padding: 60px 40px;
-  }
-
-  .contatoGrid {
-    gap: 60px;
-  }
-
-  .esquerda {
-    flex: 0 0 45%;
-    max-width: 45%;
-    padding-right: 40px;
-  }
-
-  .entreEmContato {
-    flex: 0 0 55%;
-    max-width: 55%;
-    padding: 40px;
-  }
-}
-
-/* Estilos compartilhados */
-.tituloSobre {
+/* Estilos compartilhados (mantidos do original) */
+.tituloFaleConosco {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: var(--cor-preto);
@@ -118,7 +136,7 @@ body {
   font-size: 1.4rem;
   margin-bottom: 25px;
   font-family: 'Montserrat', sans-serif;
-  color: var(--cor-preto);
+  color: var(--cor-letrasDarkThema);
 }
 
 .formularioContato {
