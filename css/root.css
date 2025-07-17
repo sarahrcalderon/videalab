@@ -18,6 +18,10 @@
   --cor-iconeDarkThema: #4b4b4b;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 .menu-btn,
 .close-btn,
 #theme-toggle {

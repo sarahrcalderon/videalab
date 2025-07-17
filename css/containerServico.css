@@ -1,7 +1,11 @@
-body {
-  background-color: var(--cor-branco);
-  margin: 0;
-  padding: 0;
+/* GALERIA DE VÍDEOS - LAYOUT RESPONSIVO */
+.containerServicos {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 .bannerContainerServico {
   width: 100vw;
@@ -36,62 +40,62 @@ body {
   }
 }
 
-.containerServicos {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: auto;
-  margin-top: 230px;
-}
-
+/* CABEÇALHO (TÍTULO + SUBTÍTULO) */
 .galeria-wrapper .Titulo {
-  flex: 1;
+  width: 100%;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .galeria-wrapper .Titulo h2 {
-  font-size: 2rem;
-  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 0 0 0.5rem 0;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   border-left: 5px solid var(--cor-laranja);
   padding-left: 15px;
-}
-.galeria-wrapper .subTitulo {
-  font-size: 1.2rem;
-  margin: 0;
-  color: var(--cor-cinzaMedio);
-  font-family: 'Montserrat', sans-serif;
-  padding-left: 15px;
-}
-.galeria-wrapper .descricaoServico {
-  font-size: 0.9rem;
-  margin: 0;
-  color: var(--cor-cinzaMedio);
-  font-family: 'Montserrat', sans-serif;
-  padding-left: 15px;
+  color: var(--cor-cinzaEscuro);
+  line-height: 1.3;
 }
 
-/* Galeria de vídeos */
-.galeria-wrapper {
-  margin: 0 auto;
+.galeria-wrapper .subTitulo {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin: 0 0 1rem 0;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
+  line-height: 1.5;
+}
+
+.galeria-wrapper .descricaoServico {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  margin: 0;
+  color: var(--cor-cinzaMedio);
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
+  line-height: 1.6;
+}
+
+/* GALERIA DE VÍDEOS */
+.galeriaTrabalho {
+  display: grid;
+  gap: 1.5rem;
   width: 100%;
 }
 
-.galeriaTrabalho {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
 .video-container {
-  aspect-ratio: 1 / 2;
+  position: relative;
   overflow: hidden;
   border-radius: 10px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
-  position: relative;
-  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  aspect-ratio: 9/16; /* Mantém proporção vertical */
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--cor-laranja);
 }
 
 .video-container video {
@@ -99,10 +103,10 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
-/* Overlay e video expandido */
+/* OVERLAY (VIDEO EXPANDIDO) */
 .video-overlay {
   display: none;
   position: fixed;
@@ -110,23 +114,61 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 1000;
   backdrop-filter: blur(5px);
 }
 
 .video-expanded {
-  max-width: 90vw;
-  max-height: 90vh;
+  width: 90vw;
+  max-width: 800px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .video-expanded video {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  max-height: 90vh;
+}
+
+/* LAYOUT RESPONSIVO */
+/* Mobile (1 coluna) */
+@media (max-width: 599px) {
+  .galeriaTrabalho {
+    grid-template-columns: 1fr;
+  }
+
+  .containerServicos {
+    margin-top: 120px;
+    padding: 1rem;
+  }
+}
+
+/* Tablet (2 colunas) */
+@media (min-width: 600px) and (max-width: 991px) {
+  .galeriaTrabalho {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (3 colunas) */
+@media (min-width: 992px) {
+  .galeriaTrabalho {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .containerServicos {
+    padding: 3rem 2rem;
+    margin-top: 150px;
+  }
+}
+
+/* Telas grandes (mais espaçamento) */
+@media (min-width: 1200px) {
+  .galeriaTrabalho {
+    gap: 2rem;
+  }
 }

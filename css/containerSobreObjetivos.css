@@ -19,7 +19,7 @@
 .tituloObjetivos {
   font-size: 2rem;
   border-left: 5px solid var(--cor-laranja);
-  color: var(--cor-preto);
+  color: var(--cor-cinzaMedio);
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   padding-left: 15px;
@@ -42,6 +42,21 @@
   text-align: center;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.direita div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
+}
+
+.direita div:hover h4 {
+  color: var(--cor-laranja);
+}
+
+.direita div:hover p {
+  color: var(--cor-cinzaEscuro);
 }
 
 .direita h4 {
@@ -60,7 +75,7 @@
 /* RESPONSIVO: tablet e desktop */
 @media (min-width: 768px) {
   .direita {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas lado a lado */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 

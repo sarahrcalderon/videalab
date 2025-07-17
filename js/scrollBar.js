@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => {
   const scrollPercent = (scrollTop / docHeight) * 100;
   const progressBar = document.querySelector('.scroll-progress');
   if (progressBar) {
-    progressBar.style.width = `${scrollPercent}%`;
+    progressBar.style.width = `${Math.min(scrollPercent, 100)}%`;
   }
 });
 document.addEventListener('DOMContentLoaded', function () {
