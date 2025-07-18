@@ -39,20 +39,14 @@ body.dark-theme .nav-wrapper {
 #theme-toggle {
   position: absolute;
   right: 5rem; /* desloca para a esquerda do menu */
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: -1vh;
   background: transparent;
   border: none;
   color: var(--cor-laranja);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
-  transition: transform 0.3s ease;
   z-index: 1001;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.1);
 }
 
 /* ===== LOGO ===== */

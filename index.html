@@ -12,6 +12,7 @@
       name="keywords"
       content="design gráfico, criação de vídeos, identidade visual, edição de vídeo, design de interface"
     />
+    <meta name="theme-color" content="#161616" />
     <meta name="author" content="videa" />
     <meta name="robots" content="index, follow" />
     <title>Design | Criação & Edição Vídeos | VIDEA LAB</title>
@@ -27,10 +28,13 @@
       property="og:image"
       content="https://www.seusite.com/assets/imagem-destacada.jpg"
     />
-    <meta property="og:url" content="https://www.videalab.com.br" />
+    <meta property="og:url" content="https://www.videalab.art.br" />
     <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      as="style"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -57,141 +61,146 @@
     />
   </head>
   <body>
-    <header role="banner">
-      <nav class="nav-wrapper" role="navigation" aria-label="Menu principal">
-        <button id="theme-toggle" class="temaBtn" aria-label="Alternar tema">
-          <i class="bi bi-sun" id="theme-icon"></i>
-        </button>
-        <div class="nav-content">
-          <div class="nav-left">
-            <a href="/">
-              <img
-                src="./assets/img/logotipo_videa_PRETO.svg"
-                alt="Logotipo da empresa VIDEA"
-                class="logo"
-                id="logo"
-              />
-            </a>
-          </div>
-          <ul class="nav-links" id="menu">
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#" id="acessibilidadeBtn">Acessibilidade</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-          <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
-            <i class="bi bi-list"></i>
+      <header role="banner">
+        <nav class="nav-wrapper" role="navigation" aria-label="Menu principal">
+          <button id="theme-toggle" class="temaBtn" aria-label="Alternar tema">
+            <i class="bi bi-sun" id="theme-icon"></i>
           </button>
-          <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
-            <i class="bi bi-x-lg"></i>
-          </button>
-        </div>
-      </nav>
-    </header>
-    <div class="hero-section">
-      <div class="hero-svg-bg"></div>
-      <a
-        href="https://www.instagram.com/videalab/"
-        class="vertical-link"
-        target="_blank"
-        >Siga a gente :-)</a
-      >
-      <div class="text-content">
-        <h1 id="tituloPrincipal">
-          Transformando negócios por meio da comunicação<span aria-hidden="true"
-            >!</span
-          >
-        </h1>
-        <h2 id="subtitulo">Presença focada — do seu jeito, no seu ritmo.</h2>
-        <div class="hero-buttons">
-          <a href="#sobre" class="btn1">Saiba mais</a>
-        </div>
-      </div>
-
-      <div class="mockup-container">
-        <video autoplay muted loop playsinline class="mockup-video">
-          <source
-            src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1751485251/720_x_1280_px_1_quy1iq.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
-    </div>
-    <div class="bannerContainerServico">
-      <div class="esteira">
-        <h2 class="tituloBanner">
-          Design • Edição • Experiência • Comunicação • Branding • Motion •
-          Estética • Identidade • Criatividade • Conexão • Videa
-        </h2>
-      </div>
-    </div>
-    <section id="servicos" role="region" aria-labelledby="titulo-servicos">
-      <div class="containerServicos">
-        <div class="galeria-wrapper">
-          <div class="Titulo">
-            <h2>O que fazemos</h2>
-            <br />
-            <p class="subTitulo">
-              Criação de vídeos, edição e design para marcas em crescimento.
-            </p>
-            <br />
-            <p class="descricaoServico">
-              Ajudamos marcas que estão entrando no mercado — ou que precisam se
-              reinventar nas redes sociais — com serviços completos de criação e
-              edição de vídeos, além de design estratégico. Desenvolvemos
-              conteúdos visuais que conectam, engajam e posicionam sua marca com
-              relevância no ambiente digital. Transformamos ideias em
-              experiências visuais que geram valor e resultados, garantindo uma
-              experiência fluida, intuitiva e centrada no seu público. Ideal
-              para campanhas, lançamentos e estratégias de marketing digital.
-            </p>
+          <div class="nav-content">
+            <div class="nav-left">
+              <a href="/">
+                <img
+                  src="./assets/img/logotipo_videa_PRETO.svg"
+                  alt="Logotipo da empresa VIDEA"
+                  class="logo"
+                  id="logo"
+                />
+              </a>
+            </div>
+            <ul class="nav-links" id="menu">
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#" id="acessibilidadeBtn">Acessibilidade</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+              <i class="bi bi-list"></i>
+            </button>
+            <button class="close-btn" id="closeBtn" aria-label="Fechar menu">
+              <i class="bi bi-x-lg"></i>
+            </button>
           </div>
-          <div class="galeriaTrabalho">
-            <div class="video-container">
-              <div class="video-overlay" aria-hidden="true">
-                <div class="video-expanded"></div>
-              </div>
-              <video
-                src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1744243303/Nutri%C3%A7%C3%A3o_VIDEA_vyc0yi.mp4"
-                controls
-                muted
-                loop
-                aria-label="Vídeo de apresentação do projeto de nutrição"
-                title="Vídeo do projeto Nutrição"
-              ></video>
-            </div>
-
-            <div class="video-container">
-              <div class="video-overlay">
-                <div class="video-expanded"></div>
-              </div>
-              <video
-                src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1744839611/202504161802_foxmau.mp4"
-                controls
-                muted
-                loop
-                aria-label="Vídeo de apresentação do projeto de psicologia"
-                title="Vídeo do projeto psicologia"
-              ></video>
-            </div>
-
-            <div class="video-container">
-              <div class="video-overlay">
-                <div class="video-expanded"></div>
-              </div>
-              <video
-                src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1745368237/VIDEA_PEDRAS_dvh34q.mp4"
-                controls
-                muted
-                loop
-                aria-label="Vídeo de apresentação do projeto de arquitetura"
-                title="Vídeo do projeto arquitetura"
-              ></video>
-            </div>
-          </div>
-        </div>
-      </div>
+        </nav>
+      </header>
     </section>
+    <section>
+      <div class="hero-section">
+        <div class="hero-svg-bg"></div>
+        <a
+          href="https://www.instagram.com/videalab/"
+          class="vertical-link"
+          target="_blank"
+          >Siga a gente :-)</a
+        >
+        <div class="text-content">
+          <h1 id="tituloPrincipal">
+            Transformando negócios por meio da comunicação<span
+              aria-hidden="true"
+              >!</span
+            >
+          </h1>
+          <h2 id="subtitulo">Presença focada — do seu jeito, no seu ritmo.</h2>
+          <div class="hero-buttons">
+            <a href="#sobre" class="btn1">Saiba mais</a>
+          </div>
+        </div>
+        <div class="mockup-container">
+          <video autoplay muted loop playsinline class="mockup-video">
+            <source
+              src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1751485251/720_x_1280_px_1_quy1iq.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+      <div class="bannerContainerServico">
+        <div class="esteira">
+          <h2 class="tituloBanner">
+            Design • Edição • Experiência • Comunicação • Branding • Motion •
+            Estética • Identidade • Criatividade • Conexão • Usabilidade
+          </h2>
+        </div>
+      </div>
+      
+      <section id="servicos" role="region" aria-labelledby="titulo-servicos">
+        <div class="containerServicos">
+          <div class="galeria-wrapper">
+            <div class="Titulo">
+              <h2>O que fazemos</h2>
+              <br />
+              <p class="subTitulo">
+                Criação de vídeos, edição e design para marcas em crescimento.
+              </p>
+              <br />
+              <p class="descricaoServico">
+                Ajudamos marcas que estão entrando no mercado — ou que precisam
+                se reinventar nas redes sociais — com serviços completos de
+                criação e edição de vídeos, além de design estratégico.
+                Desenvolvemos conteúdos visuais que conectam, engajam e
+                posicionam sua marca com relevância no ambiente digital.
+                Transformamos ideias em experiências visuais que geram valor e
+                resultados, garantindo uma experiência fluida, intuitiva e
+                centrada no seu público. Ideal para campanhas, lançamentos e
+                estratégias de marketing digital.
+              </p>
+            </div>
+            <div class="galeriaTrabalho">
+              <div class="video-container">
+                <div class="video-overlay" aria-hidden="true">
+                  <div class="video-expanded"></div>
+                </div>
+                <video
+                  src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1744243303/Nutri%C3%A7%C3%A3o_VIDEA_vyc0yi.mp4"
+                  controls
+                  muted
+                  loop
+                  aria-label="Vídeo de apresentação do projeto de nutrição"
+                  title="Vídeo do projeto Nutrição"
+                ></video>
+              </div>
+
+              <div class="video-container">
+                <div class="video-overlay">
+                  <div class="video-expanded"></div>
+                </div>
+                <video
+                  src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1744839611/202504161802_foxmau.mp4"
+                  controls
+                  muted
+                  loop
+                  aria-label="Vídeo de apresentação do projeto de psicologia"
+                  title="Vídeo do projeto psicologia"
+                ></video>
+              </div>
+
+              <div class="video-container">
+                <div class="video-overlay">
+                  <div class="video-expanded"></div>
+                </div>
+                <video
+                  src="https://res.cloudinary.com/dxqzsaf9e/video/upload/v1745368237/VIDEA_PEDRAS_dvh34q.mp4"
+                  controls
+                  muted
+                  loop
+                  aria-label="Vídeo de apresentação do projeto de arquitetura"
+                  title="Vídeo do projeto arquitetura"
+                ></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     <section id="sobre" role="region" aria-labelledby="titulo-sobre">
       <div class="containerSobre">
@@ -224,9 +233,10 @@
               </p>
             </div>
             <div class="itemIcone">
-              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <i class="bi bi-person-fill"></i>
               <p>
-                Criação de página para captura de leads com foco em conversão.
+                Conteúdo desenvolvido para encantar e facilitar a jornada do seu
+                usuário.
               </p>
             </div>
           </div>
@@ -398,17 +408,7 @@
           <a href="https://www.instagram.com/videalab" target="_blank">
             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
-          <a
-            href="https://wa.me/5511998765432?text=Oi,%20gostaria%20de%20falar%20com%20vocês"
-            target="_blank"
-          >
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-          </a>
-          <a
-            href="mailto:seu_email@dominio.com?subject=Assunto%20do%20email&body=Corpo%20do%20email"
-          >
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          </a>
+          
         </div>
         <nav aria-label="Links de navegação no rodapé">
           <ul>
@@ -418,7 +418,7 @@
           </ul>
         </nav>
         <p class="copy">
-          &copy; 2025 | VIDEALAB - Todos os direitos reservados.
+          &copy; 2025 | VIDEALAB.art.br - Todos os direitos reservados.
         </p>
       </div>
     </footer>
