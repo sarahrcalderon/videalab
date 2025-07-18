@@ -3,18 +3,14 @@ import { scrollBar } from './scrollBar';
 import { formulario } from './formulario';
 import { evitaScrollClick } from './evitaScrollClick';
 import { botaoTopo } from './botaoTopo';
-import { efeitoLinhaObjetivo } from './efeitoLinhaObjetivo';
 import { tema } from './tema';
 import { acessibilidadeMenu } from './acessibilidadeMenu';
-import { efeito } from './efeito';
 document.addEventListener('DOMContentLoaded', () => {
   setupMenu();
   scrollBar();
   formulario();
   evitaScrollClick();
-  efeitoLinhaObjetivo();
   botaoTopo();
   tema();
   acessibilidadeMenu();
-  efeito();
 });
