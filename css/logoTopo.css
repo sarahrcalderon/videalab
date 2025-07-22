@@ -44,7 +44,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   color: var(--cor-branco);
   font-family: 'Montserrat', sans-serif;
-  font-variant: small-caps;
+  text-transform: uppercase;
   margin: 1rem 0;
   font-weight: 600;
   line-height: 1.2;

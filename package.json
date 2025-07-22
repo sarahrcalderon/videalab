@@ -1,5 +1,20 @@
 {
+  "name": "videa",
+  "version": "1.0.0",
   "dependencies": {
     "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "glob": "^10.3.10"
+  },
+  "scripts": {
+    "build:js": "esbuild js/script.js --bundle --minify --sourcemap --outfile=dist/js/script.min.js --format=esm",
+    "build:css": "esbuild css/global.css --bundle --minify --outfile=dist/css/styles.min.css",
+    "build": "npm run build:js && npm run build:css",
+    "watch": "npm run build:js -- --watch & npm run build:css -- --watch",
+    "clean": "rm -rf dist/ && mkdir -p dist/{js,css}",
+    "prebuild": "npm run clean",
+    "dev": "npm run watch"
   }
 }
